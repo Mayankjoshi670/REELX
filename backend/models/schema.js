@@ -2,10 +2,10 @@
 
 const  mongoose  = require("mongoose");
 
-const schema = new mongoose.schema({
-    url : {type : string , required : true , unique : true } , 
-    description  : {type : string } , 
-    createdAt : {type : date , default : Date.now}
+const schema = new mongoose.Schema({
+    url : {type : String , required : true , unique : true } , 
+    description  : {type : String } , 
+    createdAt : {type : Date , default : Date.now}
 }); 
 
 module.exports = mongoose.model('Reel' , schema) ; 

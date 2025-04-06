@@ -1,8 +1,11 @@
 // # Route for admin-related actions
-const express = require('express') ; 
-const {postReel}   = require('../controllers/adminController') ; 
-const adminAuth  = require('../middleware/adminAuth')
-const router = express.Router() ;
-router.post('/post' ,adminAuth ,  postReel) ; // 🔐 Secured route
+// routes/adminRoutes.js
+const express = require('express');
+const router = express.Router();
 
-module.exports  = router ; 
+const { postReel } = require('../controllers/adminController');
+const adminAuth = require('../middleware/adminAuth');
+
+router.post('/post', adminAuth, postReel);
+
+module.exports = router;
